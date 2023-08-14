@@ -228,7 +228,7 @@ async def next_page(bot, query):
     time_difference = timedelta(hours=cur_time.hour, minutes=cur_time.minute, seconds=(cur_time.second+(cur_time.microsecond/1000000))) - timedelta(hours=curr_time.hour, minutes=curr_time.minute, seconds=(curr_time.second+(curr_time.microsecond/1000000)))
     remaining_seconds = "{:.2f}".format(time_difference.total_seconds())
     if settings["button"]:
-        cap = f"<img src='https://graph.org/file/f6c113ce79d5cb526fcec.png'>", f"<b>🎪 Title :  {search}\n\n┏⁉️ Asked By :  {query.from_user.mention}\n┣⏱ Result Show In : {remaining_seconds} sᴇᴄᴏɴᴅs\n┗🔆 Powered By : {query.message.chat.title} \n\n⚠️ After 10 Minutes This Message Will Be Automatically Deleted 🗑️\n\n</b>"
+        cap = f"<img src='https://graph.org/file/f6c113ce79d5cb526fcec.png'>"\ f"<b>🎪 Title :  {search}\n\n┏⁉️ Asked By :  {query.from_user.mention}\n┣⏱ Result Show In : {remaining_seconds} sᴇᴄᴏɴᴅs\n┗🔆 Powered By : {query.message.chat.title} \n\n⚠️ After 10 Minutes This Message Will Be Automatically Deleted 🗑️\n\n</b>"
     else:
         # cap = f"<b>Hᴇʏ {query.from_user.mention}, Hᴇʀᴇ ɪs ᴛʜᴇ ʀᴇsᴜʟᴛ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search} \n\n</b>"
         cap = f"<b>Hᴇʏ {query.from_user.mention}, Fᴏᴜɴᴅ {total} Rᴇsᴜʟᴛs ғᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}\n\n</b>"
@@ -1910,7 +1910,7 @@ async def auto_filter(client, msg, spoll=False):
     #     )
     # else:
     if settings["button"]:
-        cap =f"<img src='https://graph.org/file/f6c113ce79d5cb526fcec.png'>", f"<b>🎪 Title : {search}\n\n┏⁉️ Asked By : {message.from_user.mention}\n┣⏱ Result Show In : {remaining_seconds} sᴇᴄᴏɴᴅs\n┗🔆 Powered By : : {message.chat.title} \n\n⚠️ After 10 Minutes This Message Will Be Automatically Deleted 🗑️\n\n</b>"
+        cap =f"<img src='https://graph.org/file/f6c113ce79d5cb526fcec.png'>"\ f"<b>🎪 Title : {search}\n\n┏⁉️ Asked By : {message.from_user.mention}\n┣⏱ Result Show In : {remaining_seconds} sᴇᴄᴏɴᴅs\n┗🔆 Powered By : : {message.chat.title} \n\n⚠️ After 10 Minutes This Message Will Be Automatically Deleted 🗑️\n\n</b>"
     else:
         # cap = f"<b>Hᴇʏ {message.from_user.mention}, Hᴇʀᴇ ɪs ᴛʜᴇ ʀᴇsᴜʟᴛ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search} \n\n</b>"
         cap = f"<b>Hᴇʏ {message.from_user.mention}, Fᴏᴜɴᴅ {total_results} Rᴇsᴜʟᴛs ғᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}\n\n</b>"
