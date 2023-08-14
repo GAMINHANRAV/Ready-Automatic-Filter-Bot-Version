@@ -149,7 +149,7 @@ async def next_page(bot, query):
             ]
         )
         btn.insert(0, [
-            InlineKeyboardButton('⭕️ Update Channel ⭕️', url=TUTORIAL)
+            InlineKeyboardButton('🇮🇳 Happy Independence Day 🇮🇳', url=TUTORIAL)
 
         ])
 
@@ -439,12 +439,12 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         )
     # if ENABLE_SHORTLINK == True:
     btn.insert(0, [
-        InlineKeyboardButton('⭕️ Update Channel ⭕️', url=TUTORIAL)
+        InlineKeyboardButton('🇮🇳 Happy Independence Day 🇮🇳', url=TUTORIAL)
 
     ])
     # else:
     #     btn.insert(0, [
-    #         InlineKeyboardButton('⭕️ Update Channel ⭕️', url=TUTORIAL)
+    #         InlineKeyboardButton('🇮🇳 Happy Independence Day 🇮🇳', url=TUTORIAL)
 
     #     ])
     try:
@@ -609,7 +609,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
             for file in files
         ]
     btn.insert(0, [
-        InlineKeyboardButton('⭕️ Update Channel ⭕️', url=TUTORIAL)
+        InlineKeyboardButton('🇮🇳 Happy Independence Day 🇮🇳', url=TUTORIAL)
 
     ])
     
@@ -1821,23 +1821,23 @@ async def auto_filter(client, msg, spoll=False):
     #     ]
         btn.insert(0, 
             [
-                InlineKeyboardButton("Languages", callback_data=f"languages#{key}"),
-                InlineKeyboardButton("Seasons", callback_data=f"seasons#{key}")
+                InlineKeyboardButton("🎙 Languages 🎙", callback_data=f"languages#{key}"),
+                InlineKeyboardButton("✳️ Seasons ✳️", callback_data=f"seasons#{key}")
             ]
         )
     # if ENABLE_SHORTLINK == True:
     #     btn.insert(0, [
-    #         InlineKeyboardButton('⭕️ Update Channel ⭕️', url=TUTORIAL)
+    #         InlineKeyboardButton('🇮🇳 Happy Independence Day 🇮🇳', url=TUTORIAL)
 
     #         )
     #     ])
     # else:
     #     btn.insert(0, [
-    #         InlineKeyboardButton('⭕️ Update Channel ⭕️', url=TUTORIAL)
+    #         InlineKeyboardButton('🇮🇳 Happy Independence Day 🇮🇳', url=TUTORIAL)
 
     #     ])
         btn.insert(0, [
-            InlineKeyboardButton('⭕️ Update Channel ⭕️', url=TUTORIAL)
+            InlineKeyboardButton('🇮🇳 Happy Independence Day 🇮🇳', url=TUTORIAL)
 
         ])
     # if ENABLE_TUTORIAL == True:
