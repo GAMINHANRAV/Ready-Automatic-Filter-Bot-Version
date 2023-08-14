@@ -144,14 +144,13 @@ async def next_page(bot, query):
 
         btn.insert(0, 
             [
-                InlineKeyboardButton("♻️ Send All", callback_data=f"sendfiles#{key}"),
-                InlineKeyboardButton("Languages", callback_data=f"languages#{key}"),
-                InlineKeyboardButton("Seasons",  callback_data=f"seasons#{key}")
+                InlineKeyboardButton("🎙 Languages 🎙", callback_data=f"languages#{key}"),
+                InlineKeyboardButton("✳️ Seasons ✳️",  callback_data=f"seasons#{key}")
             ]
         )
         btn.insert(0, [
-            InlineKeyboardButton("Start Bot", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton('⚜️ Tips', 'select')
+            InlineKeyboardButton('⭕️ Update Channel ⭕️', url=TUTORIAL)
+
         ])
 
     else:
@@ -222,15 +221,6 @@ async def next_page(bot, query):
                 ],
             )
     # if ENABLE_SHORTLINK == True:
-        # btn.insert(0, [
-        #     InlineKeyboardButton('⚜️ Tips', 'select'),
-        #     InlineKeyboardButton("♻️ Send All", callback_data=f"sendfiles#{key}")
-        # ])
-    # else:
-    #     btn.insert(0, [
-    #         InlineKeyboardButton('⚜️ Tips', 'select'),
-    #         InlineKeyboardButton("♻️ Send All", callback_data=f"send_fall#{pre}#{key}#{offset}")
-    #     ])
     # btn.insert(0, [
     #     InlineKeyboardButton("⚡ How To Download ⚡", url=await get_tutorial(query.message.chat.id))
     # ])
@@ -399,9 +389,8 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'Sᴇʟᴇᴄᴛ ➢', 'select'),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
-                    InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
+                    InlineKeyboardButton("🎙 Languages 🎙", callback_data=f"languages#{key}"),
+                    InlineKeyboardButton("✳️ Seasons ✳️",  callback_data=f"seasons#{key}")
                 ]
             )
 
@@ -410,9 +399,8 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'Sᴇʟᴇᴄᴛ ➢', 'select'),
-                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
-                    InlineKeyboardButton("Sᴇᴀsᴏɴs", callback_data=f"seasons#{key}")
+                    InlineKeyboardButton("🎙 Languages 🎙", callback_data=f"languages#{key}"),
+                    InlineKeyboardButton("✳️ Seasons ✳️", callback_data=f"seasons#{key}")
                 ]
                       )
 
@@ -421,9 +409,8 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         await save_group_settings(query.message.chat.id, 'auto_delete', True)
         btn.insert(0, 
             [
-                InlineKeyboardButton(f'Sᴇʟᴇᴄᴛ ➢', 'select'),
-                InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
-                InlineKeyboardButton("Sᴇᴀsᴏɴs", callback_data=f"seasons#{key}")
+                InlineKeyboardButton("🎙 Languages 🎙", callback_data=f"languages#{key}"),
+                InlineKeyboardButton("✳️ Seasons ✳️", callback_data=f"seasons#{key}")
             ]
                   )
 
@@ -452,13 +439,13 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         )
     # if ENABLE_SHORTLINK == True:
     btn.insert(0, [
-        InlineKeyboardButton('⚜️ Tips', 'select'),
-        InlineKeyboardButton("♻️ Send All", callback_data=f"sendfiles#{key}")
+        InlineKeyboardButton('⭕️ Update Channel ⭕️', url=TUTORIAL)
+
     ])
     # else:
     #     btn.insert(0, [
-    #         InlineKeyboardButton('⚜️ Tips', 'select'),
-    #         nlineKeyboardButton("♻️ Send All", callback_data=f"sendfiles#{key}")
+    #         InlineKeyboardButton('⭕️ Update Channel ⭕️', url=TUTORIAL)
+
     #     ])
     try:
         await query.edit_message_reply_markup(
@@ -622,8 +609,8 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
             for file in files
         ]
     btn.insert(0, [
-        InlineKeyboardButton("♻️ Send All", callback_data=f"sendfiles#{key}"),
-        InlineKeyboardButton("Select Again", callback_data=f"seasons#{key}")
+        InlineKeyboardButton('⭕️ Update Channel ⭕️', url=TUTORIAL)
+
     ])
     
 
@@ -1834,25 +1821,24 @@ async def auto_filter(client, msg, spoll=False):
     #     ]
         btn.insert(0, 
             [
-                InlineKeyboardButton('⚜️ Tips', 'select'),
                 InlineKeyboardButton("Languages", callback_data=f"languages#{key}"),
                 InlineKeyboardButton("Seasons", callback_data=f"seasons#{key}")
             ]
         )
     # if ENABLE_SHORTLINK == True:
     #     btn.insert(0, [
-    #         InlineKeyboardButton("Start Bot", url=f"https://telegram.me/{temp.U_NAME}"),
-    #         InlineKeyboardButton("♻️ Send ALL", url=await get_shortlink(message.chat.id, f"https://telegram.me/{temp.U_NAME}?start=allfiles_{key}")
+    #         InlineKeyboardButton('⭕️ Update Channel ⭕️', url=TUTORIAL)
+
     #         )
     #     ])
     # else:
     #     btn.insert(0, [
-    #         InlineKeyboardButton("Start Bot", url=f"https://telegram.me/{temp.U_NAME}"),
-    #         InlineKeyboardButton("♻️ Send ALL", callback_data=f"send_fall#{pre}#{message.chat.id}-{message.id}#{0}")
+    #         InlineKeyboardButton('⭕️ Update Channel ⭕️', url=TUTORIAL)
+
     #     ])
         btn.insert(0, [
-            InlineKeyboardButton("Start Bot", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("♻️ Send ALL", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton('⭕️ Update Channel ⭕️', url=TUTORIAL)
+
         ])
     # if ENABLE_TUTORIAL == True:
     #     btn.insert(0, [
